@@ -10,9 +10,9 @@ const expandContent = (id: string) => {
   }
 };
 
-function handleOutsideClick(event) {
-  console.log(event.target, popoverContent.valu);
-  if (popoverContent.value && !popoverContent.value.contains(event.target)) {
+function handleOutsideClick(event: MouseEvent) {
+  console.log(event.target, popoverContent.value);
+  if (popoverContent.value && !popoverContent.value.contains(event.target as Node)) {
     isExpanded.value = false;
   }
 };
@@ -65,16 +65,16 @@ function handleOutsideClick(event) {
   }
 
   .feature video {
-    width: 800px;
+    width: 100%;
     height: auto;
   }
 
   .popover-content {
-    display: inline-block;
+    width: 90%;
   }
 
   .popover-content p {
-    width: 800px;
+    width: 100%;
   }
 
   /* Popover styling */
@@ -90,4 +90,20 @@ function handleOutsideClick(event) {
     align-items: center;
     z-index: 1000;
   }
+
+  /* For mobile */
+  @media (max-width: 768px) {
+    .popover-content {
+      width: 90%;
+    }
+
+    .popover-content p {
+      width: 100%;
+    }
+
+    .feature video {
+      width: 100%;
+    }
+  }
+
 </style>
