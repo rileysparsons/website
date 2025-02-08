@@ -1,0 +1,23 @@
+@import './base.css';
+
+#app {
+  margin: 0 auto;
+  padding: 4rem;
+  font-weight: normal;
+  height: 100vh;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: #659B5E;
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: #556F4433;
+  }
+}
+
