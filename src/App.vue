@@ -11,7 +11,6 @@ const expandContent = (id: string) => {
 };
 
 function handleOutsideClick(event: MouseEvent) {
-  console.log(event.target, popoverContent.value);
   if (popoverContent.value && !popoverContent.value.contains(event.target as Node)) {
     isExpanded.value = false;
   }
@@ -70,7 +69,7 @@ function handleOutsideClick(event: MouseEvent) {
   }
 
   .popover-content {
-    width: 90%;
+    width: 50%;
   }
 
   .popover-content p {
